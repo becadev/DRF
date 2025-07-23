@@ -19,7 +19,7 @@ urlpatterns = [
     path('api/v1/', 
         include([
             path('post/', include(('post.api.urls', 'post'), namespace='posts')),
-            path('swagger/schema/', schema_view.with_ui('swagger', cache_timeout=0), name="swagger-schema"),
+            path('swagger/schema/', schema_view.with_ui('swagger', cache_timeout=0), name="swagger-schema"), #aponta caminho especifico para swagger documentation
         ])
     ),
 ]
